@@ -49,7 +49,7 @@ Una aplicación web interactiva y visualmente amigable para organizar sorteos de
 ## Autor
 
 Desarrollado con cariño por **PedroZavan**.  
-Este es mi primer sitio web, creado con dedicación, armonía visual y pensado para brindar una experiencia amigable al usuario.
+Este es el primer sitio web construido 100% por mi, fue creado con dedicación, armonía visual y pensado para brindar una experiencia amigable al usuario.
 
 
 ## Licencia
