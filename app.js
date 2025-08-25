@@ -50,24 +50,34 @@ function mostrarListaAmigos(){
 }
 
 //Función para sortear un amigo
-function sortearAmigo(){
+function sortearAmigo() {
+    if (sorteoRealizado) {
+        // Limpiar resultado anterior
+        resultadoSorteo.textContent = "";
+
+        // Mostrar advertencia clara y única
+        resultadoSorteo.innerHTML = "<li class='advertencia-sorteo'>⚠️ Sorteo ya realizado. Presiona 'Reiniciar sorteo' para comenzar uno nuevo.</li>";
+        resultadoSorteo.classList.add("resultado-visible");
+        return;
+    }
+
     if (amigos.length < 2) {
-        alert ("Necesitas ingresar almenos a 2 amigos para realizar el sorteo");
+        alert("Necesitas ingresar al menos a 2 amigos para realizar el sorteo");
         return;
     }
 
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const amigoSorteado = amigos[indiceAleatorio];
 
-//Limpiar lista visual de amigos una vez ya sorteado
-listaVisualAmigos.innerHTML = "";
+    // Limpiar lista visual de amigos una vez sorteado
+    listaVisualAmigos.innerHTML = "";
 
-//Mostrar el resultado en pantalla
-resultadoSorteo.textContent = "🎉El amigo secreto es: " + amigoSorteado;
-resultadoSorteo.classList.add("resultado-visible");
-sorteoRealizado = true;
-
+    // Mostrar el resultado en pantalla
+    resultadoSorteo.textContent = "🎉 El amigo secreto es: " + amigoSorteado;
+    resultadoSorteo.classList.add("resultado-visible");
+    sorteoRealizado = true;
 }
+
 
 function reiniciarJuego() {
     amigos = [];

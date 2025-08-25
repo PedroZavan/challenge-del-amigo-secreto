@@ -238,3 +238,8 @@ ul {
 .boton-reiniciar:hover {
   background-color: #e64a19;
 }
+.advertencia-sorteo {
+  color: #e60f0f;
+  font-weight: bold;
+  margin-top: 10px;
+}
